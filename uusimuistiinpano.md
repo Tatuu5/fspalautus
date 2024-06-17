@@ -6,7 +6,7 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->browser: "server redirects the browser to the url /exampleapp/notes"
+    server-->>browser: "server redirects the browser to the url /exampleapp/notes"
     Note left of server: The server saves the sent note to the JSON file
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
