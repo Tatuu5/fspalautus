@@ -6,8 +6,8 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->browser: "nothing"
-    Note left of server: The server saves the sent noteto the JSON file
+    server-->browser: "server saves committed note"
+    Note left of server: The server saves the sent note to the JSON file
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
