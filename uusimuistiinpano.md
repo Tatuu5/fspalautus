@@ -8,6 +8,7 @@ sequenceDiagram
     activate server
     server-->>browser: "server redirects the browser to the url /exampleapp/notes (reloads the website)"
     deactive server
+
     Note left of server: The server saves the sent note to the JSON file
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
