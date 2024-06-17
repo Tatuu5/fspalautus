@@ -1,10 +1,14 @@
-# Diagram
 
 ```mermaid
 sequenceDiagram
     participant browser
     participant server
-    
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server-->browser: "nothing"
+    Note left of server: The server saves the sent noteto the JSON file
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML document
